@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.js"></script>
+    <script src ="Add.js"></script>
+
+</head>
+<body>
+<div ng-app="myApp"  class="container">
+<h3>Angularjs Cascading Dropdown/Select</h3>
+<form class="form-horizontal" ng-controller="dropdownCtrl">
+    <div class="form-group">
+        <label for="country" class="col-sm-2 control-label">Country </label>
+        <div class="col-sm-7">
+            <select ng-model="country"
+                    ng-options="country.id as country.name for country in countries"
+                    class="form-control"
+                    ng-required="true"
+                    id="country">
+                <option value="">-- Choose Country --</option>
+            </select>
+        </div>
+    </div>
+
+</form>
+</div>
+</body>
+</html>
